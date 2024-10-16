@@ -23,7 +23,7 @@ def connect_to_host(ip):
     client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
     
     try:
-        client.connect(ip, 22, "ns.yanwarangga", "banyak2dzikir")
+        client.connect(ip, port, "username", "password")
         shell = client.invoke_shell()
         
         for command in command_list:
